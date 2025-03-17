@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Mini App</title>
+    <title>Курс валют</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Привет, мир!</h1>
-        <button onclick="sendData()">Нажми меня</button>
+        <h1>Курс доллара ЦБ РФ</h1>
+        <button onclick="getCurrency()">Обновить</button>
+        <div id="currencyContainer">
+            <p>1 USD = <span id="rate">—</span> RUB</p>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
