@@ -88,24 +88,36 @@ button:active {
     }
 }
 
-/* Темная тема */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #1a1a1a;
-    color: #ffffff; /* Белый цвет для обычного текста */
-  }
+/* Оформления лоудера */
+#loader {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: none;
+    align-items: center;
+    gap: 12px;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
 
-  h1 {
-    color: #ffffff !important; /* Явно задаем белый цвет для заголовка */
-  }
+.loader-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
 
-  #currencyContainer {
-    background: #2d2d2d;
-    border-color: #444;
-    color: #e0e0e0; /* Светло-серый для текста внутри контейнера */
-  }
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
-  #rate {
-    color: #4caf50; /* Зеленый цвет для курса (можно изменить) */
-  }
+.loader-text {
+    font-size: 14px;
 }

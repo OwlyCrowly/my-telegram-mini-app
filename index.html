@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Курс доллара ЦБ РФ</h1>
-        <button onclick="getCurrency()">Обновить</button>
+        <h1>Курсы товаров</h1>
+        <div id="loader">Загрузка данных...</div>
+        <div class="prices-grid">
         <div id="currencyContainer">
             <p>1 USD = <span id="rate">—</span> RUB</p>
         </div>
+
     </div>
     <script src="app.js"></script>
 </body>
